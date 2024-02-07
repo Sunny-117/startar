@@ -1,6 +1,6 @@
 {
-  "name": "esbuild-plugin-xxx",
-  "version": "0.1.0",
+  "name": "@commencer/esbuild-plugin-xxx",
+  "version": "0.0.0",
   "description": "ESBuild plugin for__.",
   "keywords": [
     "esbuild",

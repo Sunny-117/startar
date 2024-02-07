@@ -1,5 +1,5 @@
 {
-  "name": "rollup-plugin-xxx",
+  "name": "@commencer/rollup-plugin",
   "version": "0.0.1",
   "description": "",
   "type": "module",
