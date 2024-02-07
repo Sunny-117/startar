@@ -7,7 +7,7 @@
 
 > Starter template for xxx
 
-# Feature
+# Support
 
 ✅[esbuild-plugin](./packages/esbuild-plugins-starter/README.md)
 
