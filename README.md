@@ -17,6 +17,10 @@
 
 ✅[unplugin](./packages/unplugin-starter/README.md)
 
+✅[mini-template](./packages/mini-template/README.md)
+
+✅[mini-template-cli](./packages/mini-template-cli/README.md)
+
 ...
 
 ## Install
