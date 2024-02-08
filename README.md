@@ -15,6 +15,8 @@
 
 ✅[pnpm-monorepo](./packages/monorepo-starter/README.md)
 
+✅[swc-monorepo](./packages/swc-mono/readme.md)
+
 ✅[unplugin](./packages/unplugin-starter/README.md)
 
 ✅[mini-template](./packages/mini-template/README.md)
