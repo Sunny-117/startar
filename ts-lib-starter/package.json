@@ -1,0 +1,61 @@
+{
+  "name": "ts-lib-starter",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.9.0",
+  "description": "My awesome typescript library",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/sxzz/ts-lib-starter#readme",
+  "bugs": {
+    "url": "https://github.com/sxzz/ts-lib-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxzz/ts-lib-starter.git"
+  },
+  "author": "三咲智子 Kevin Deng <sxzz@sxzz.moe>",
+  "funding": "https://github.com/sponsors/sxzz",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --cache --write .",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@sxzz/eslint-config": "^4.1.0",
+    "@sxzz/prettier-config": "^2.0.2",
+    "@types/node": "^20.16.3",
+    "bumpp": "^9.5.2",
+    "eslint": "^9.9.1",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "prettier": "@sxzz/prettier-config"
+}
