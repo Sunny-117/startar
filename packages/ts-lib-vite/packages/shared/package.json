@@ -1,0 +1,8 @@
+{
+	"name": "shared",
+	"version": "1.0.0",
+	"description": "公用方法和类型定义",
+	"scripts": {},
+	"author": "",
+	"license": "ISC"
+}
