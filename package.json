@@ -1,0 +1,40 @@
+{
+  "name": "starter",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Sunny-117",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunny-117/starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sunny-117/starter/issues"
+  },
+  "bin": {
+    "sst": "index.js"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "templates/**"
+  ],
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/prompts": "^2.4.9",
+    "cross-spawn": "^7.0.3",
+    "minimist": "^1.2.8",
+    "picocolors": "^1.1.0",
+    "prompts": "^2.4.2",
+    "unbuild": "^2.0.0"
+  }
+}
