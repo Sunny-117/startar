@@ -1,18 +1,18 @@
 {
-  "name": "starter",
+  "name": "qcr",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "author": "Sunny-117",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sunny-117/starter.git"
+    "url": "git+https://github.com/Sunny-117/qcr.git"
   },
   "bugs": {
-    "url": "https://github.com/Sunny-117/starter/issues"
+    "url": "https://github.com/Sunny-117/qcr/issues"
   },
   "bin": {
-    "sst": "index.js"
+    "qcr": "index.js"
   },
   "files": [
     "dist",
@@ -26,15 +26,18 @@
     "dev": "unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "bumpp && pnpm publish"
   },
   "devDependencies": {
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
+    "bumpp": "^9.6.1",
     "cross-spawn": "^7.0.3",
     "minimist": "^1.2.8",
     "picocolors": "^1.1.0",
     "prompts": "^2.4.2",
     "unbuild": "^2.0.0"
-  }
+  },
+  "packageManager": "pnpm@9.12.0"
 }
