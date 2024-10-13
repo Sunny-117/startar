@@ -1,18 +1,18 @@
 {
-  "name": "qcr",
+  "name": "startar",
   "type": "module",
   "version": "0.0.1-alpha",
   "author": "Sunny-117",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sunny-117/qcr.git"
+    "url": "git+https://github.com/Sunny-117/startar.git"
   },
   "bugs": {
-    "url": "https://github.com/Sunny-117/qcr/issues"
+    "url": "https://github.com/Sunny-117/startar/issues"
   },
   "bin": {
-    "qcr": "index.js"
+    "startar": "index.js"
   },
   "files": [
     "dist",
