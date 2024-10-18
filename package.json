@@ -23,7 +23,7 @@
     "node": "^18.0.0 || >=20.0.0"
   },
   "scripts": {
-    "dev": "unbuild --stub",
+    "dev": "nodemon unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
