@@ -1,7 +1,8 @@
 import minimist from "minimist";
 import fs from "node:fs";
+import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { emptyDir, formatTargetDir, isEmpty } from "./utils";
+import { copy, emptyDir, formatTargetDir, isEmpty, renameFiles } from "./utils";
 import { helpMessage } from "./helper";
 import prompts from "prompts";
 import { blue, cyan, green, red, reset, yellow } from "picocolors";
@@ -141,6 +142,28 @@ async function init() {
     emptyDir(root);
   } else if (!fs.existsSync(root)) {
     fs.mkdirSync(root, { recursive: true });
+  }
+
+  // determine template
+  let template: string = framework?.name || argTemplate;
+  const templateDir = path.resolve(
+    fileURLToPath(import.meta.url),
+    "../..",
+    `templates/${template}`
+  );
+
+  const write = (file: string, content?: string) => {
+    const targetPath = path.join(root, renameFiles[file] ?? file);
+    if (content) {
+      fs.writeFileSync(targetPath, content);
+    } else {
+      copy(path.join(templateDir, file), targetPath);
+    }
+  };
+
+  const files = fs.readdirSync(templateDir);
+  for (const file of files.filter((f) => f !== "package.json")) {
+    write(file);
   }
 }
 init().catch((e) => {
