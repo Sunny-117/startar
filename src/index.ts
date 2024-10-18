@@ -1,5 +1,6 @@
 import minimist from "minimist";
 import { formatTargetDir } from "./utils";
+import { helpMessage } from "./helper";
 
 const argv = minimist<{
   template?: string;
@@ -13,13 +14,11 @@ const argv = minimist<{
 async function init() {
   const argTargetDir = formatTargetDir(argv._[0]);
   const argTemplate = argv.template || argv.t;
-  console.log(argTargetDir, argTemplate, "-=====-");
-
-  // const help = argv.help;
-  // if (help) {
-  //   console.log(helpMessage);
-  //   return;
-  // }
+  const help = argv.help;
+  if (help) {
+    console.log(helpMessage);
+    return;
+  }
 
   // let targetDir = argTargetDir || defaultTargetDir;
   // const getProjectName = () =>
