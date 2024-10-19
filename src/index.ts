@@ -165,6 +165,10 @@ async function init() {
   for (const file of files.filter((f) => f !== "package.json")) {
     write(file);
   }
+  const pkg = JSON.parse(
+    fs.readFileSync(path.join(templateDir, `package.json`), "utf-8")
+  );
+  write("package.json", JSON.stringify(pkg, null, 2) + "\n");
 }
 init().catch((e) => {
   console.error(e);
