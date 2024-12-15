@@ -11,8 +11,12 @@
 
 插件开发，推荐使用 unplugin-starter，同时兼容 vite,rollup,esbuild,webpack,rspack...
 
-## 使用方法
+## Install
 
+```shell
+npm i -g startar
+startar
+```
 ![](./assets/usage.png)
 
 ## dev
