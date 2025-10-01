@@ -23,9 +23,8 @@
     "node": "^18.0.0 || >=20.0.0"
   },
   "scripts": {
-    "dev": "esno scripts/dev.ts",
-    "start": "unbuild --stub",
-    "build": "unbuild",
+    "dev": "robuild --watch",
+    "build": "robuild",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "release": "bumpp && pnpm publish"
@@ -42,6 +41,7 @@
     "minimist": "^1.2.8",
     "picocolors": "^1.1.0",
     "prompts": "^2.4.2",
+    "robuild": "^0.0.7",
     "unbuild": "^2.0.0"
   },
   "packageManager": "pnpm@9.12.0"
