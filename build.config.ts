@@ -1,18 +1,15 @@
-import { defineBuildConfig } from 'unbuild'
+import { defineConfig } from 'robuild'
 
-export default defineBuildConfig({
-  entries: ['src/index'],
-  clean: true,
-  alias: {
-    // https://github.com/vitejs/vite/pull/14030
-    // we can always use non-transpiled code since we support node 18+
-    prompts: 'prompts/lib/index.js',
-  },
-  rollup: {
-    inlineDependencies: true,
-    esbuild: {
-      target: 'node18',
-      minify: true,
-    },
-  },
+export default defineConfig({
+  entries: [{
+    input: 'src/index.ts',
+    format: ['esm'],
+    type: 'bundle',
+    dts: true,
+    alias: {
+      // https://github.com/vitejs/vite/pull/14030
+      // we can always use non-transpiled code since we support node 18+
+      prompts: 'prompts/lib/index.js',
+    }
+  }],
 })
