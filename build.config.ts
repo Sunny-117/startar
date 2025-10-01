@@ -6,5 +6,10 @@ export default defineConfig({
     format: ['esm'],
     type: 'bundle',
     dts: true,
+    alias: {
+      // https://github.com/vitejs/vite/pull/14030
+      // we can always use non-transpiled code since we support node 18+
+      prompts: 'prompts/lib/index.js',
+    },
   }],
 })
