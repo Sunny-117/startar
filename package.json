@@ -34,15 +34,15 @@
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
     "bumpp": "^9.6.1",
+    "prompts": "^2.4.2",
+    "robuild": "^0.0.7"
+  },
+  "dependencies": {
     "chokidar": "^4.0.1",
     "chokidar-cli": "^3.0.0",
     "cross-spawn": "^7.0.3",
-    "esno": "^4.8.0",
     "minimist": "^1.2.8",
-    "picocolors": "^1.1.0",
-    "prompts": "^2.4.2",
-    "robuild": "^0.0.7",
-    "unbuild": "^2.0.0"
+    "picocolors": "^1.1.0"
   },
   "packageManager": "pnpm@9.12.0"
 }
