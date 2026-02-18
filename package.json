@@ -35,7 +35,7 @@
     "@types/prompts": "^2.4.9",
     "bumpp": "^9.6.1",
     "prompts": "^2.4.2",
-    "robuild": "^0.0.7"
+    "robuild": "^0.1.3"
   },
   "dependencies": {
     "chokidar": "^4.0.1",
